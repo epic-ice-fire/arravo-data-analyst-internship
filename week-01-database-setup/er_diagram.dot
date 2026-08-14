@@ -1,0 +1,28 @@
+digraph ER {
+  graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.5", ranksep="0.8"];
+  node [shape=record, fontname="Arial", fontsize=10];
+  edge [fontname="Arial", fontsize=9];
+
+  branches [label="{branches|PK branch_id|branch_name|city|region}"];
+  departments [label="{departments|PK department_id|department_name}"];
+  positions [label="{positions|PK position_id|title|FK department_id|level}"];
+  employees [label="{employees|PK employee_id|first_name|last_name|FK department_id|FK position_id|FK branch_id|monthly_salary|employment_status}"];
+  salaries [label="{salaries|PK salary_id|FK employee_id|pay_month|base_salary|bonus|deductions|net_pay}"];
+  attendance [label="{attendance|PK attendance_id|FK employee_id|att_date|status}"];
+  suppliers [label="{suppliers|PK supplier_id|supplier_name|category|city}"];
+  products [label="{products|PK product_id|product_name|category|FK supplier_id|unit_price|stock_qty}"];
+  customers [label="{customers|PK customer_id|customer_name|email|phone|city|signup_date|customer_segment}"];
+  sales [label="{sales|PK sale_id|sale_date|FK branch_id|FK employee_id|FK customer_id|FK product_id|quantity|total_amount|payment_method}"];
+
+  departments -> positions [label="1:M"];
+  departments -> employees [label="1:M"];
+  positions -> employees [label="1:M"];
+  branches -> employees [label="1:M"];
+  employees -> salaries [label="1:M"];
+  employees -> attendance [label="1:M"];
+  suppliers -> products [label="1:M"];
+  branches -> sales [label="1:M"];
+  employees -> sales [label="1:M"];
+  customers -> sales [label="1:M"];
+  products -> sales [label="1:M"];
+}
