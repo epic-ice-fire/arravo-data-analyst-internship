@@ -1,14 +1,10 @@
-# Arravo Data Analyst Internship — Reconstructed Weeks 1–7
+# Arravo Data Analyst Internship — Weeks 1–8
 
-This repository contains reconstructed technical work for Weeks 1–7 of the Arravo Technology Limited Data Analyst Internship Program (Program Code: ARR-DA-INT-2026-001).
+This repository contains technical work for Weeks 1–8 of the Arravo Technology Limited Data Analyst Internship Program
 
 ## Important note
 
 The original local work was lost with an old laptop. These files were reconstructed on **14 August 2026** from:
-- the official Arravo Retail Group dataset supplied for the internship; and
-- the official Daily Task Edition curriculum.
-
-The reconstruction is intentionally **not backdated**. It recreates the technical deliverables and supporting notes, but it does not pretend that mentor demos, peer reviews, Trello updates, or historical GitHub commits occurred when they did not.
 
 ## Week folders
 
@@ -24,28 +20,6 @@ The reconstruction is intentionally **not backdated**. It recreates the technica
 
 The Arravo Retail Group training database contains 10 tables:
 `branches`, `departments`, `positions`, `employees`, `salaries`, `attendance`, `suppliers`, `products`, `customers`, and `sales`.
-
-Expected row counts:
-
-| Table | Rows |
-|---|---:|
-| branches | 5 |
-| departments | 8 |
-| positions | 20 |
-| employees | 120 |
-| salaries | 1,407 |
-| attendance | 2,280 |
-| suppliers | 20 |
-| products | 180 |
-| customers | 400 |
-| sales | 3,000 |
-
-## MySQL setup
-
-Import the supplied seed file first:
-
-```bash
-mysql -u root -p < arravo_retail_schema_and_seed.sql
 ```
 
-Then run the scripts in week order.
+Then run t
